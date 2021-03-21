@@ -1,13 +1,15 @@
 $packageName = "zentimings"
 $url64 = 'https://github.com/irusanov/ZenTimings/releases/download/v${VERSION}/ZenTimings_v${VERSION}.zip'
 $checksum64 = '${CHECKSUM64}'
+$checksumType64 = 'sha256'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installDir = Join-Path $toolsDir $packageName
 $file = Join-Path $toolsDir "$($packageName).zip"
 
-Get-ChocolateyWebFile "$packageName" "$file" \`
-    -url64 $url64 \`
-    -checksum64 $checksum64
+Get-ChocolateyWebFile "$packageName" "$file" `
+    -url64 $url64 `
+    -checksum64 $checksum64 `
+    -checksumType64 $checksumType64
 
 Get-ChocolateyUnzip "$file" "$installDir" -packageName "$packageName"
