@@ -7,7 +7,7 @@ $installDir = Join-Path $toolsDir $packageName
 $file = Join-Path $toolsDir "$($packageName).zip"
 
 Get-ChocolateyWebFile "$packageName" "$file" \`
-	-url64 $url64 \`
+    -url64 $url64 \`
     -checksum64 $checksum64
 
 Get-ChocolateyUnzip "$file" "$installDir" -packageName "$packageName"
