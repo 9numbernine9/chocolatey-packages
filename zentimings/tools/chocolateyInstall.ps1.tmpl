@@ -5,6 +5,7 @@ $checksumType64 = 'sha256'
 
 Install-ChocolateyZipPackage -PackageName "$packageName" `
     -Url64Bit $url64 `
+    -UnzipLocation "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)" `
     -Checksum64 $checksum64 `
     -ChecksumType64 $checksumType64
 
