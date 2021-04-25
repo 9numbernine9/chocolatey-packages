@@ -1,0 +1,17 @@
+$packageName = "go-jira"
+$url = 'https://github.com/go-jira/jira/releases/download/v${VERSION}/jira-windows-386.exe'
+$url64 = 'https://github.com/go-jira/jira/releases/download/v${VERSION}/jira-windows-amd64.exe'
+$checksum = '${CHECKSUM}'
+$checksum64 = '${CHECKSUM64}'
+$checksumType = 'sha256'
+$checksumType64 = 'sha256'
+
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+Get-ChocolateyWebFile -PackageName "$packageName" `
+    -FileFullPath "$toolsDir\jira.exe" `
+    -Url "$url" `
+    -Url64Bit "$url64" `
+    -Checksum "$checksum" `
+    -ChecksumType "$checksumType" `
+    -Checksum64 "$checksum64" `
+    -ChecksumType64 "$checksumType64"
