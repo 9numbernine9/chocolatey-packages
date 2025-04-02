@@ -1,0 +1,17 @@
+$packageName = "freelens"
+$url64 = 'https://github.com/freelensapp/freelens/releases/download/v${VERSION}/Freelens-${VERSION}-windows-amd64.msi'
+$checksum64 = '${CHECKSUM64}'
+
+$packageArgs = @{
+  packageName    = $packageName
+  fileType       = 'MSI'
+  url64bit       = $url64
+
+  checksum64     = $checksum64
+  checksumType64 = 'sha256'
+
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes = @(0, 3010, 1641)
+}
+
+Install-ChocolateyPackage @packageArgs
