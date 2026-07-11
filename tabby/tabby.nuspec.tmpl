@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tabby</id>
+    <title>Tabby</title>
+    <version>${VERSION}</version>
+    <authors>Eugene Pankov (and contributors)</authors>
+    <owners>9numbernine9</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/Eugeny/tabby/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Eugeny/tabby</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Eugeny/tabby@master/build/icons/256x256.png</iconUrl>
+    <description>Tabby is a web technology based terminal heavily inspired by Hyper. It is, however, designed for people who need to get things done.
+
+Runs on Windows, macOS and Linux
+Theming and color schemes
+Configurable hotkey schemes
+GNU Screen style hotkeys available by default
+Full Unicode support including double-width characters
+Doesn't choke on fast-flowing outputs
+Tab persistence on macOS and Linux
+Proper shell-like experience on Windows including tab completion (thanks, Clink!)
+CMD, PowerShell, Cygwin, Git-Bash and Bash on Windows support
+Default Linux style hotkeys for copy (Ctrl+Shift+C) and paste (Ctrl+Shift+V)
+
+## Package parameters
+- `/allusers` - Install in allusers folder(C:\Program Files\Tabby) instead of user profile's folder.
+
+Example: choco install tabby --params "/allusers"</description>
+    <summary>A terminal for a more modern age (formerly Terminus)</summary>
+    <releaseNotes>https://github.com/Eugeny/tabby/releases/tag/v${VERSION}</releaseNotes>
+    <copyright>© 2017 Tabby Developers</copyright>
+    <tags>terminal console windows admin</tags>
+    <projectSourceUrl>https://github.com/Eugeny/tabby</projectSourceUrl>
+    <packageSourceUrl>https://github.com/9numbernine9/chocolatey-packages/</packageSourceUrl>
+    <docsUrl>https://github.com/Eugeny/tabby/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/Eugeny/tabby/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+</package>
